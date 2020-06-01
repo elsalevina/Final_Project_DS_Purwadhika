@@ -38,6 +38,11 @@ def results():
 def data_visualization():
     return render_template('NFR_datavisualization.html')
 
+@app.route('/dataset')
+def dataset():
+    return render_template('NFR_tables.html')
+
+
 if __name__ == '__main__':
     countmatrix = joblib.load('CVJoblib') 
     df = pd.read_csv('dfcleaned.csv')
