@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Results</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body style="background-color:white">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="http://127.0.0.1:5000/">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="http://127.0.0.1:5000/data_visualization">Data Visualization</a>
+          </div>
+        </div>
+    </nav>
+    
+    <center>
+        <img src="https://media.giphy.com/media/55gQaNeJ807Obuw6hr/giphy.gif" width=200>
+        <h3>MOVIES & TV SHOWS SIMILAR TO "{{inputtitle.upper()}}"</h3>
+        <br>
+        <table class="table table-sm">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" style="text-align:center">Type</th>
+                <th scope="col" style="text-align:center">Title</th>
+                <th scope="col" style="text-align:center">Director</th>
+                <th scope="col" style="text-align:center">Cast</th>
+                <th scope="col" style="text-align:center">Country</th>
+                <th scope="col" style="text-align:center">Year Released</th>
+                <th scope="col" style="text-align:center">Rating</th>
+                <th scope="col" style="text-align:center">Duration</th>
+                <th scope="col" style="text-align:center">Listed In</th>
+                <th scope="col" style="text-align:center">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{rec.type.iloc[0]}}</td>
+                <td>{{rec.title.iloc[0]}}</td>
+                <td>{{rec.director.iloc[0]}}</td>
+                <td>{{rec.cast.iloc[0]}}</td>
+                <td>{{rec.country.iloc[0]}}</td>
+                <td>{{rec.release_year.iloc[0]}}</td>
+                <td>{{rec.rating.iloc[0]}}</td>
+                <td>{{rec.duration.iloc[0]}}</td>
+                <td>{{rec.listed_in.iloc[0]}}</td>
+                <td>{{rec.description.iloc[0]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[1]}}</td>
+                <td>{{rec.title.iloc[1]}}</td>
+                <td>{{rec.director.iloc[1]}}</td>
+                <td>{{rec.cast.iloc[1]}}</td>
+                <td>{{rec.country.iloc[1]}}</td>
+                <td>{{rec.release_year.iloc[1]}}</td>
+                <td>{{rec.rating.iloc[1]}}</td>
+                <td>{{rec.duration.iloc[1]}}</td>
+                <td>{{rec.listed_in.iloc[1]}}</td>
+                <td>{{rec.description.iloc[1]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[2]}}</td>
+                <td>{{rec.title.iloc[2]}}</td>
+                <td>{{rec.director.iloc[2]}}</td>
+                <td>{{rec.cast.iloc[2]}}</td>
+                <td>{{rec.country.iloc[2]}}</td>
+                <td>{{rec.release_year.iloc[2]}}</td>
+                <td>{{rec.rating.iloc[2]}}</td>
+                <td>{{rec.duration.iloc[2]}}</td>
+                <td>{{rec.listed_in.iloc[2]}}</td>
+                <td>{{rec.description.iloc[2]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[3]}}</td>
+                <td>{{rec.title.iloc[3]}}</td>
+                <td>{{rec.director.iloc[3]}}</td>
+                <td>{{rec.cast.iloc[3]}}</td>
+                <td>{{rec.country.iloc[3]}}</td>
+                <td>{{rec.release_year.iloc[3]}}</td>
+                <td>{{rec.rating.iloc[3]}}</td>
+                <td>{{rec.duration.iloc[3]}}</td>
+                <td>{{rec.listed_in.iloc[3]}}</td>
+                <td>{{rec.description.iloc[3]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[4]}}</td>
+                <td>{{rec.title.iloc[4]}}</td>
+                <td>{{rec.director.iloc[4]}}</td>
+                <td>{{rec.cast.iloc[4]}}</td>
+                <td>{{rec.country.iloc[4]}}</td>
+                <td>{{rec.release_year.iloc[4]}}</td>
+                <td>{{rec.rating.iloc[4]}}</td>
+                <td>{{rec.duration.iloc[4]}}</td>
+                <td>{{rec.listed_in.iloc[4]}}</td>
+                <td>{{rec.description.iloc[4]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[5]}}</td>
+                <td>{{rec.title.iloc[5]}}</td>
+                <td>{{rec.director.iloc[5]}}</td>
+                <td>{{rec.cast.iloc[5]}}</td>
+                <td>{{rec.country.iloc[5]}}</td>
+                <td>{{rec.release_year.iloc[5]}}</td>
+                <td>{{rec.rating.iloc[5]}}</td>
+                <td>{{rec.duration.iloc[5]}}</td>
+                <td>{{rec.listed_in.iloc[5]}}</td>
+                <td>{{rec.description.iloc[5]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[6]}}</td>
+                <td>{{rec.title.iloc[6]}}</td>
+                <td>{{rec.director.iloc[6]}}</td>
+                <td>{{rec.cast.iloc[6]}}</td>
+                <td>{{rec.country.iloc[6]}}</td>
+                <td>{{rec.release_year.iloc[6]}}</td>
+                <td>{{rec.rating.iloc[6]}}</td>
+                <td>{{rec.duration.iloc[6]}}</td>
+                <td>{{rec.listed_in.iloc[6]}}</td>
+                <td>{{rec.description.iloc[6]}}</td>
+              </tr>              
+              <tr>
+                <td>{{rec.type.iloc[7]}}</td>
+                <td>{{rec.title.iloc[7]}}</td>
+                <td>{{rec.director.iloc[7]}}</td>
+                <td>{{rec.cast.iloc[7]}}</td>
+                <td>{{rec.country.iloc[7]}}</td>
+                <td>{{rec.release_year.iloc[7]}}</td>
+                <td>{{rec.rating.iloc[7]}}</td>
+                <td>{{rec.duration.iloc[7]}}</td>
+                <td>{{rec.listed_in.iloc[7]}}</td>
+                <td>{{rec.description.iloc[7]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[8]}}</td>
+                <td>{{rec.title.iloc[8]}}</td>
+                <td>{{rec.director.iloc[8]}}</td>
+                <td>{{rec.cast.iloc[8]}}</td>
+                <td>{{rec.country.iloc[8]}}</td>
+                <td>{{rec.release_year.iloc[8]}}</td>
+                <td>{{rec.rating.iloc[8]}}</td>
+                <td>{{rec.duration.iloc[8]}}</td>
+                <td>{{rec.listed_in.iloc[8]}}</td>
+                <td>{{rec.description.iloc[8]}}</td>
+              </tr>
+              <tr>
+                <td>{{rec.type.iloc[9]}}</td>
+                <td>{{rec.title.iloc[9]}}</td>
+                <td>{{rec.director.iloc[9]}}</td>
+                <td>{{rec.cast.iloc[9]}}</td>
+                <td>{{rec.country.iloc[9]}}</td>
+                <td>{{rec.release_year.iloc[9]}}</td>
+                <td>{{rec.rating.iloc[9]}}</td>
+                <td>{{rec.duration.iloc[9]}}</td>
+                <td>{{rec.listed_in.iloc[9]}}</td>
+                <td>{{rec.description.iloc[9]}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </center>
+</body>
+
+</html>
