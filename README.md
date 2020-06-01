@@ -1,8 +1,6 @@
 ### Data Science Final Project at Purwadhika
 # Netflix Movies & TV Shows Recommendation 📽️🍿
 
-## __I. Introduction__
-
 __Netflix__ is subscription-based streaming service which offers online streaming of a wide variety of movies and television programs, including those produced in-house. According to Wikipedia, as of April 2020, Netflix had over 182 million paid subscriptions worldwide. It seems that Neflix's popularity are increasing day by day especially on this 'stay-at-home' situation. Therefore I thought it would be interesting to do some analysis on Netflix's contents as well as to build a content-based movies & TV shows recommendation system.
 
 #### __About the Dataset__
